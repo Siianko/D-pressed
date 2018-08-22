@@ -13,6 +13,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'haml-rails'
 gem 'devise'
 gem 'geocoder'
+gem 'faker'
 
 group :development, :test do
   gem 'chromedriver-helper'

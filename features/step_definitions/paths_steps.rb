@@ -17,9 +17,4 @@ def page_path(path)
     else
         root_path
     end
-end
-
-Then("I should be redirected to the {string} page") do |page|
-    expect(current_path).to eq page_path(page)    
-end
-  
+end  
