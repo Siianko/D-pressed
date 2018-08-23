@@ -13,14 +13,9 @@
     = stylesheet_pack_tag 'application'
 
   %body
-    .page_title D-Pressed. Sad news for the sad world.
- 
-    .articles
-      = yield
-      = flash[:notice]
-      = flash[:error]
-      = notice
+    %nav
+      = link_to 'New Article', new_article_path
 
-    .app-footer
-
-
+    = flash[:notice]
+    = flash[:error]
+    = yield

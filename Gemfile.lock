@@ -47,6 +47,21 @@ GEM
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
+    aws-eventstream (1.0.1)
+    aws-partitions (1.100.0)
+    aws-sdk-core (3.24.1)
+      aws-eventstream (~> 1.0)
+      aws-partitions (~> 1.0)
+      aws-sigv4 (~> 1.0)
+      jmespath (~> 1.0)
+    aws-sdk-kms (1.7.0)
+      aws-sdk-core (~> 3)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-s3 (1.17.0)
+      aws-sdk-core (~> 3, >= 3.21.2)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.0)
+    aws-sigv4 (1.0.3)
     backports (3.11.3)
     bcrypt (3.1.12)
     bindex (0.5.0)
@@ -137,6 +152,7 @@ GEM
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
+    jmespath (1.4.0)
     json (2.1.0)
     launchy (2.4.3)
       addressable (~> 2.3)
@@ -177,6 +193,10 @@ GEM
       pry (>= 0.10.4)
     public_suffix (3.0.2)
     puma (3.12.0)
+    pundit (2.0.0)
+      activesupport (>= 3.0.0)
+    pundit-matchers (1.6.0)
+      rspec-rails (>= 3.0.0)
     rack (2.0.5)
     rack-proxy (0.6.4)
       rack
@@ -304,6 +324,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk-s3
   bootsnap (>= 1.1.0)
   chromedriver-helper
   coveralls
@@ -319,6 +340,8 @@ DEPENDENCIES
   pry-byebug
   pry-rails
   puma (~> 3.11)
+  pundit
+  pundit-matchers (~> 1.6.0)
   rails (~> 5.2.1)
   rspec-rails
   sass-rails (~> 5.0)

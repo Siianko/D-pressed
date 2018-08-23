@@ -4,7 +4,7 @@ Given("the following article exists/exist") do |table|
     end
 end
 
-Given("the following user exist/exists") do |table|
+Given("the following user(s) exist/exists") do |table|
     table.hashes.each do |user_hash|
         create(:user, user_hash)
     end

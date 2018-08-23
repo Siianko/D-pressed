@@ -13,7 +13,3 @@ Feature: Visitor can view articles on the landing page
         Then I should see 'This is so sad'
         And I should see 'A recent report suggest that news are mostly sad. Which is sad.'
         And the date is '2018-08-17'
-
-    
-       
-

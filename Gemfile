@@ -12,8 +12,10 @@ gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'haml-rails'
 gem 'devise'
+gem 'aws-sdk-s3', require: false
 gem 'faker'
 gem 'webpacker', '~> 3.4'
+gem 'pundit'
 
 group :development, :test do
   gem 'chromedriver-helper'
@@ -28,6 +30,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'launchy'
   gem 'timecop'
+  gem 'pundit-matchers', '~> 1.6.0'
 end
 
 group :development do

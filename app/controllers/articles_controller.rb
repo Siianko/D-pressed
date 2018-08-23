@@ -1,6 +1,5 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-
   
   def index
     @articles = Article.all
@@ -8,10 +7,12 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    authorize @article
   end
 
   def new
     @article = Article.new
+    authorize @article
   end
 
   def create
@@ -25,7 +26,9 @@ class ArticlesController < ApplicationController
   end
   
    private
-   def article_params
-    params.require(:article).permit(:title, :body)
+   
+  def article_params
+    params.require(:article).permit(:title, :body, :image)
   end
+
 end

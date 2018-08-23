@@ -1,3 +1,4 @@
+%p= image_tag @article.image
 %p
   %strong Title:
   = @article.title
@@ -7,8 +8,3 @@
 %p
   %strong Text:
   = @article.body
-
-%p
-  %strong Text:
-  = @article.created_at.to_date
-

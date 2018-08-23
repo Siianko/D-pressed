@@ -23,4 +23,5 @@ Devise.setup do |config|
 
   config.sign_out_via = :delete
 
+  config.secret_key = Rails.application.credentials.secret_key_base
 end
