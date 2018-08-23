@@ -10,7 +10,10 @@ class ApplicationController < ActionController::Base
         end
         locations = Geocoder.search(coords)
         @edition = check_proximity(locations, "Stockholm County") ? "Stockholm" : "Sweden"
-        #@edition = "Sweden"
+        if params['located'] == 'true'
+
+            cookies[:geocoded] = true
+        end
     end
 
 
