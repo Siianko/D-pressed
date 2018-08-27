@@ -1,15 +1,29 @@
-%br 
-%br
-.navbar.bg-white.border-b
-  .container.mx-auto.w-full
-    = link_to_unless_current t('english'), locale: "en"
-    = link_to_unless_current t('svenska'), locale: "se" 
-    = link_to 'D-pressed', root_path  
 
-  #login-menu.flex.pin-r.sticky
+.navbar.bg-white.border-b
+
+
+  %nav.flex.items-center.justify-between.flex-wrap.bg-grey.p-6
+    
+
     - unless current_user
-      .py-4.mr-4.text-grey= link_to t('registration'), new_user_registration_path
-      .py-4.mr-4.text-grey= link_to t('log_in'), new_user_session_path
+      .container-registration
+      %button.bg-white.hover:bg-grey-lightest.text-grey-darkest.py-2.px-4.border.border-grey-light.rounded.shadow= link_to t('registration'), new_user_registration_path
+      %button.bg-white.hover:bg-grey-lightest.text-grey-darkest.py-2.px-4.border.border-grey-light.rounded.shadow= link_to t('log_in'), new_user_session_path
+      
+    %svg.fill-current.h-8.w-8.mr-2{:height => "54", :viewbox => "0", :width => "54"}
+    = link_to 'D-pressed', root_path  
+    
+    .container#languages
+    %button.flex.items-center.px-3.py-2.border.rounded.text-black-lighter.border-black-light.hover:text-white.hover:border-white= link_to_unless_current t('english'), locale: "en"
+    %button.flex.items-center.px-3.py-2.border.rounded.text-black-lighter.border-black-light.hover:text-white.hover:border-white= link_to_unless_current t('svenska'), locale: "se" 
+
+  .container.mx-auto
+    %a.block.mt-4.lg:inline-block.lg:mt-0.text-black-lighter.hover:text-red.mr-20
+      Politics
+    %a.block.mt-4.lg:inline-block.lg:mt-0.text-black-lighter.hover:text-red.mr-20
+      Economy
+    %a.block.mt-4.lg:inline-block.lg:mt-0.text-black-lighter.hover:text-red.mr-20
+      Entertainment 
       
    
       
