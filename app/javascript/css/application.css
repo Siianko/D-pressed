@@ -78,6 +78,19 @@
   padding: 5px;
 }
 
+body {
+  background: black;  
+
+  position: relative;
+  font: "Lato", "lucida Grande", "Lucida Sans Unicode";
+  font-size: 15px;
+}
+
+.container#languages {
+  position: absolute; 
+  
+}
+
 /*
 .a {
 text-decoration: none;
