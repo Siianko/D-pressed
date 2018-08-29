@@ -81,6 +81,8 @@ ActiveRecord::Schema.define(version: 2018_08_27_165812) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
     t.integer "role"
     t.string "provider", default: "email", null: false
     t.string "uid", default: "", null: false
