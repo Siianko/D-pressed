@@ -16,4 +16,10 @@ class User < ApplicationRecord
     self.role ||= :basic_user
   end
   
+
+  geocoded_by :coordinates
+
+  def coordinates
+    [self.latitude, self.longitude]
+  end
 end

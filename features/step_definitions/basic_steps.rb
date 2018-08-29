@@ -23,6 +23,22 @@ When("I click on {string}") do |element|
 end
 
 Given("I am logged in as {string}") do |email|
-    @user = User.find_by(email: email)
-     login_as(@user, scope: :user)
- end
+    user = User.find_by(email: email)
+    login_as(user, scope: :user)
+end
+
+Given("I visit the site from {string}") do |location|
+
+    case location
+    when 'Stockholm'
+        coords = [59.334591, 18.063240]
+    when 'Täby'
+        coords = [59.4439, 18.06872]
+    else
+        coords = [57.708870, 11.974560]
+    end 
+    visit root_path
+    page.execute_script("setCookie('location', '#{coords}')")
+    visit root_path
+end
+
