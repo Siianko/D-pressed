@@ -15,7 +15,6 @@
 //= require turbolinks
 //= require_tree .
 
-<<<<<<< HEAD
 function handleRating(path) {
     let ratingButtons = document.querySelectorAll('button')
     let noticeDiv = document.querySelector('.notice')
@@ -47,7 +46,6 @@ function handleRating(path) {
     })
 }
 
-=======
 function setCookie(name, value) {
     var days = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 7;
     var path = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '/';
@@ -82,4 +80,3 @@ document.addEventListener('turbolinks:load', ()=>{
     })
 })
 
->>>>>>> 3bcf71209bbcce254ebd7b09b408e2c7f05823e6
