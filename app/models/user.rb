@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_many :articles
   has_many :ratings
   has_many :comments
+
+  geocoded_by :coordinates
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
@@ -13,5 +15,8 @@ class User < ApplicationRecord
   def set_default_role
     self.role ||= :basic_user
   end
-  
+
+  def coordinates
+    [self.latitude, self.longitude]
+  end
 end

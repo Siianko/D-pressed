@@ -12,9 +12,20 @@
     = javascript_pack_tag 'application'
     = stylesheet_pack_tag 'application'
   %body
+<<<<<<< HEAD
     = render 'shared/links_navbar'
     .notice
       = flash[:notice]
     .alert
       = flash[:error]
     = yield
+=======
+    = flash[:notice]
+    = flash[:error]
+    = notice
+    = "You are viewing the #{@edition} Edition"
+    = yield
+
+
+
+>>>>>>> 3bcf71209bbcce254ebd7b09b408e2c7f05823e6

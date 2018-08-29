@@ -1,7 +1,7 @@
 FactoryBot.define do
     factory :article do
-        title "MyString"
-        body "MyText"
+        title { "MyString" }
+        body { "MyText" }
         user
         category
         after(:build) do |article|

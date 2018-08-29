@@ -109,14 +109,15 @@ GEM
     erubi (1.7.1)
     erubis (2.7.0)
     execjs (2.7.0)
-    factory_bot (4.10.0)
+    factory_bot (4.11.0)
       activesupport (>= 3.0.0)
-    factory_bot_rails (4.10.0)
-      factory_bot (~> 4.10.0)
+    factory_bot_rails (4.11.0)
+      factory_bot (~> 4.11.0)
       railties (>= 3.0.0)
     faker (1.9.1)
       i18n (>= 0.7)
     ffi (1.9.25)
+    geocoder (1.5.0)
     gherkin (5.1.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
@@ -175,7 +176,7 @@ GEM
       pry (~> 0.10)
     pry-rails (0.3.6)
       pry (>= 0.10.4)
-    public_suffix (3.0.2)
+    public_suffix (3.0.3)
     puma (3.12.0)
     pundit (2.0.0)
       activesupport (>= 3.0.0)
@@ -280,9 +281,9 @@ GEM
     tilt (2.0.8)
     timecop (0.9.1)
     tins (1.16.3)
-    turbolinks (5.1.1)
-      turbolinks-source (~> 5.1)
-    turbolinks-source (5.1.0)
+    turbolinks (5.2.0)
+      turbolinks-source (~> 5.2)
+    turbolinks-source (5.2.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (4.1.18)
@@ -316,6 +317,7 @@ DEPENDENCIES
   devise
   factory_bot_rails
   faker
+  geocoder
   haml-rails
   launchy
   listen (>= 3.0.5, < 3.2)
@@ -342,4 +344,4 @@ RUBY VERSION
    ruby 2.4.3p205
 
 BUNDLED WITH
-   1.16.3
+   1.16.2

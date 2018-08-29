@@ -19,5 +19,25 @@ class ApplicationController < ActionController::Base
 
     def set_locale
         I18n.locale = params[:locale] || I18n.default_locale
+
+    before_action :get_edition
+
+    def get_edition
+        if user_signed_in? && current_user.geocoded?
+            coords = current_user.coordinates 
+        elsif cookies[:location]
+            coords = eval(cookies[:location])
+        end
+        locations = Geocoder.search(coords)
+        @edition = check_proximity(locations, "Stockholm County") ? "Stockholm" : "Sweden"
+        if params['located'] == 'true'
+
+            cookies[:geocoded] = true
+        end
+
+        def check_proximity(locations, county)
+            locations.any?{|location| location.state == county}
+        end
     end
+  
 end
